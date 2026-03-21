@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 362704237}
   - component: {fileID: 362704239}
   - component: {fileID: 362704238}
+  - component: {fileID: 362704240}
   m_Layer: 5
   m_Name: DamageOverlay
   m_TagString: Untagged
@@ -300,8 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Material: {fileID: 2100000, guid: 93cdc9857be62d8408ebb4e0f6add0c0, type: 2}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -326,6 +327,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362704236}
   m_CullTransparentMesh: 1
+--- !u!114 &362704240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362704236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e150e49e79da77e4e86dd4d27ae18306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedDamageEffect
+  overlayMaterial: {fileID: 2100000, guid: 93cdc9857be62d8408ebb4e0f6add0c0, type: 2}
 --- !u!1001 &373395281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,7 +972,6 @@ GameObject:
   m_Component:
   - component: {fileID: 889134859}
   - component: {fileID: 889134858}
-  - component: {fileID: 889134860}
   m_Layer: 0
   m_Name: Background1
   m_TagString: Untagged
@@ -1040,19 +1053,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &889134860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889134857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de09597ac68c654b8469c91bdb898ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Respawn
-  respawnPoint: {fileID: 0}
 --- !u!1001 &891908538
 PrefabInstance:
   m_ObjectHideFlags: 0

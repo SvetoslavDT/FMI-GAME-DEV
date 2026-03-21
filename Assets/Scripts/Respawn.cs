@@ -25,6 +25,7 @@ public class Respawn : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            GameManager.instance.removeHealth();
             collision.transform.position = respawnPoint.transform.position;
         }
     }
