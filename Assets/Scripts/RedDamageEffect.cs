@@ -28,12 +28,17 @@ public class RedDamageEffect : MonoBehaviour
         {
             // float intensity = Mathf.Lerp(0.2f, 0.7f, Mathf.PingPong(Time.time, 1));
 
-            float intensity = Mathf.PingPong(Time.time, 0.5f) + 0.2f;
+            float intensity = Mathf.PingPong(Time.time, 0.5f) + 0.1f;
             overlayMaterial.SetFloat("_Intensity", intensity);
         }
         else
         {
             overlayMaterial.SetFloat("_Intensity", 0);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        overlayMaterial.SetFloat("_Intensity", 0);
     }
 }

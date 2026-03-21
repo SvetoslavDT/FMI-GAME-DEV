@@ -54,10 +54,10 @@ public class GameManager : MonoBehaviour
 
         if (currentHearts < 0)
         {
-            // currentHearts = 0;
+            currentHearts = 0;
             // OnHealthChanged?.Invoke(currentHearts);
-            // return;
-            Application.Quit();
+            return;
+            // Application.Quit();
         }
 
         hearts[currentHearts].sprite = shallowHeartSprite;
