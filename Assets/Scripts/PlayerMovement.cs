@@ -6,8 +6,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpForce = 10f;
 
+    [SerializeField] float knockbackForceX = 5f;
+    [SerializeField] float knockbackForceY = 3f;
+
     private float horizontal;
     private Rigidbody2D rb;
+    private Animator animator;
 
     private bool isJumping;
     private bool isOnGround;
@@ -19,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -81,5 +86,16 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void TakeDamage(Transform enemyTransform)
+    {
+        GameManager.instance.removeHealth();
+
+        float dir = transform.position.x < enemyTransform.position.x ? -1f : 1f;
+
+        rb.linearVelocity = new Vector2(dir * knockbackForceX, knockbackForceY);
+
+        animator.SetTrigger("Hurt");
     }
 }

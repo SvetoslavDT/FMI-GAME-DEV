@@ -38,8 +38,6 @@ public class Enemy : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
-
-        
     }
 
     private void Move()
@@ -62,7 +60,14 @@ public class Enemy : MonoBehaviour
         {
             if (Time.time - lastDamageTime > damageCooldown)
             {
-                GameManager.instance.removeHealth();
+                // GameManager.instance.removeHealth();
+
+                PlayerMovement player = collision.gameObject.GetComponent<PlayerMovement>();
+                if (player != null)
+                {
+                    player.TakeDamage(transform);
+                }
+
                 lastDamageTime = Time.time;
             }
         }

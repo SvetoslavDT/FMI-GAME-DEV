@@ -128,12 +128,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2021259099479208353, guid: f98cb9889816c9140a20a73c94f82790, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8702201
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021259099479208353, guid: f98cb9889816c9140a20a73c94f82790, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.44
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2021259099479208353, guid: f98cb9889816c9140a20a73c94f82790, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.490018
+      value: -6.429
       objectReference: {fileID: 0}
     - target: {fileID: 2021259099479208353, guid: f98cb9889816c9140a20a73c94f82790, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1611,6 +1615,7 @@ GameObject:
   - component: {fileID: 1447127977}
   - component: {fileID: 1447127976}
   - component: {fileID: 1447127975}
+  - component: {fileID: 1447127981}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1804,6 +1809,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447127981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447127974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd512341b825a7047991a9eb80d2ddf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimation
+  idleThreshold: 0.1
 --- !u!1001 &1508811850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2666,6 +2684,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1256017947523853586, guid: d0c886f07e410d24391798bf68d7f615, type: 3}
+      propertyPath: knockbackForceY
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4306682663085517831, guid: d0c886f07e410d24391798bf68d7f615, type: 3}
       propertyPath: m_Name
       value: Player
